@@ -20,8 +20,8 @@ class AddPostModal extends React.Component {
             <Modal show={this.props.show} onHide={this.props.handleClose}>
                 <MuiThemeProvider>
                     <AppBar
-                        style={{backgroundColor: blueColor}}
-                        title="Add todo item"
+                        style={ {backgroundColor: blueColor} }
+                        title={ this.props.title }
                         iconElementLeft={
                             <IconButton>
                                 <NavigationClose onClick={ this.props.handleClose } />
@@ -40,6 +40,7 @@ class AddPostModal extends React.Component {
                                                 errorText={ titleErrorMessage ? titleErrorMessage['message'] : null }
                                                 onChange={ event => this.props.handlePostChange(event, 'title') }
                                                 underlineFocusStyle={ {borderBottomColor: blueColor} }
+                                                maxLength="100"
                                                 floatingLabelShrinkStyle={ {color: blueColor} } />
                                 </Col>
                             </Row>
@@ -51,6 +52,7 @@ class AddPostModal extends React.Component {
                                                 errorText={ detailsErrorMessage ? detailsErrorMessage['message'] : null }
                                                 onChange={ event => this.props.handlePostChange(event, 'details') }
                                                 underlineFocusStyle={ {borderBottomColor: blueColor} }
+                                                maxLength="1000"
                                                 floatingLabelShrinkStyle={ {color: blueColor} } />
                                 </Col>
                             </Row>

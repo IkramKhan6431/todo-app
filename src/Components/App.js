@@ -218,9 +218,19 @@ class App extends React.Component {
         let posts = _.cloneDeep(this.state.posts);
         let selectedPost = _.find(posts, { id: postId });
         selectedPost['done'] = !selectedPost['done'];
+        let snackbarMessage = '';
+        if(selectedPost['done']) {
+            snackbarMessage = 'Marked as done';
+        }
+        else {
+            snackbarMessage = 'Marked as undone';
+        }
 
         this.setState({
-            posts
+            posts,
+            showSnackbar: true,
+            snackbarMessage,
+            snackbarHideDuration: 1000
         });
         localStorage.setItem('posts', JSON.stringify(posts));
     }
@@ -255,7 +265,8 @@ class App extends React.Component {
                               blueColor={ blueColor }
                               errorMessages={ this.state.errorMessages }
                               addTodoItem={ this.addTodoItem }
-                              handlePostChange={ this.handlePostChange }/>
+                              handlePostChange={ this.handlePostChange } 
+                              title="Add todo item" />
                 <MuiThemeProvider>
                     <Snackbar open={ this.state.showSnackbar }
                               message={ this.state.snackbarMessage }

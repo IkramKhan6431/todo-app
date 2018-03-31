@@ -1,7 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
-import { MuiThemeProvider, IconButton } from 'material-ui';
-import Clear from 'material-ui/svg-icons/communication/clear-all';
+import { Navbar } from 'react-bootstrap';
 
 class Header extends React.Component {
 
@@ -16,15 +14,6 @@ class Header extends React.Component {
                         <label className="app-label">Todo App</label>
                     </Navbar.Brand>
                 </Navbar.Header>
-                    {/* <Nav pullRight>
-                        <NavItem>
-                            <MuiThemeProvider>
-                                <IconButton tooltip="Clear List">
-                                    <Clear />
-                                </IconButton>
-                            </MuiThemeProvider>
-                        </NavItem>
-                    </Nav> */}
             </Navbar>
         )
     }

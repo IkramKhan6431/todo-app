@@ -45,6 +45,8 @@ body {
 .list-group-item-heading {
   margin-top: 0;
   margin-bottom: 5px;
+  word-wrap: break-word;
+  font-weight: 600;
 }
 
 .list-group-item-text {

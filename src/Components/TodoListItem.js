@@ -99,7 +99,8 @@ class TodoListItem extends React.Component {
                                        blueColor={ blueColor }
                                        errorMessages={ errorMessages }
                                        addTodoItem={ this.editTodoItem }
-                                       handlePostChange={ this.props.handlePostChange }/>
+                                       handlePostChange={ this.props.handlePostChange }
+                                       title="Edit todo item" />
                     </ListGroupItem>
                 }
             </div>
