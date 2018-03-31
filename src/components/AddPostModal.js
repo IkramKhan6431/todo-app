@@ -31,32 +31,30 @@ class AddPostModal extends React.Component {
                 </MuiThemeProvider>
                 <Modal.Body>
                     <MuiThemeProvider>
-                        <div>
-                            <Row>
-                                <Col sm={12}>
-                                    <TextField  floatingLabelText="Title"
-                                                fullWidth={ true }
-                                                value={ newPost['title'] }
-                                                errorText={ titleErrorMessage ? titleErrorMessage['message'] : null }
-                                                onChange={ event => this.props.handlePostChange(event, 'title') }
-                                                underlineFocusStyle={ {borderBottomColor: blueColor} }
-                                                maxLength="100"
-                                                floatingLabelShrinkStyle={ {color: blueColor} } />
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col sm={12}>
-                                    <TextField  floatingLabelText="Details"
-                                                fullWidth={ true }
-                                                value={ newPost['details'] }
-                                                errorText={ detailsErrorMessage ? detailsErrorMessage['message'] : null }
-                                                onChange={ event => this.props.handlePostChange(event, 'details') }
-                                                underlineFocusStyle={ {borderBottomColor: blueColor} }
-                                                maxLength="1000"
-                                                floatingLabelShrinkStyle={ {color: blueColor} } />
-                                </Col>
-                            </Row>
-                        </div>
+                        <Row>
+                            <Col sm={12}>
+                                <TextField  floatingLabelText="Title"
+                                            fullWidth={ true }
+                                            value={ newPost['title'] }
+                                            errorText={ titleErrorMessage ? titleErrorMessage['message'] : null }
+                                            onChange={ event => this.props.handlePostChange(event, 'title') }
+                                            underlineFocusStyle={ {borderBottomColor: blueColor} }
+                                            maxLength="100"
+                                            floatingLabelShrinkStyle={ {color: blueColor} } />
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col sm={12}>
+                                <TextField  floatingLabelText="Details"
+                                            fullWidth={ true }
+                                            value={ newPost['details'] }
+                                            errorText={ detailsErrorMessage ? detailsErrorMessage['message'] : null }
+                                            onChange={ event => this.props.handlePostChange(event, 'details') }
+                                            underlineFocusStyle={ {borderBottomColor: blueColor} }
+                                            maxLength="1000"
+                                            floatingLabelShrinkStyle={ {color: blueColor} } />
+                            </Col>
+                        </Row>
                     </MuiThemeProvider>
                 </Modal.Body>
 
