@@ -56,7 +56,7 @@ class App extends React.Component {
             loading: true
         });
         if(!_.isEmpty(localStorage.getItem('posts'))) {
-            posts = JSON.parse(localStorage.getItem('posts'));
+            posts = JSON.parse(localStorage.getItem('posts'), 10);
         }
         this.setState({
             posts,
