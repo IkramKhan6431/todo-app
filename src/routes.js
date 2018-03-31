@@ -1,9 +1,9 @@
 import React from 'react';
 import {Route, IndexRoute} from 'react-router';
-import App from './Components/App';
+import App from './components/App';
 
 export default (
     <Route path='/'>
-        <IndexRoute component={App}/>
+        <IndexRoute component={ App } />
     </Route>
 );

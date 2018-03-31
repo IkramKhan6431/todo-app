@@ -56,7 +56,7 @@ class App extends React.Component {
             loading: true
         });
         if(!_.isEmpty(localStorage.getItem('posts'))) {
-            posts = JSON.parse(localStorage.getItem('posts'), 10);
+            posts = JSON.parse(localStorage.getItem('posts'));
         }
         this.setState({
             posts,
@@ -149,7 +149,7 @@ class App extends React.Component {
             {
                 let id = 1;
                 if(localStorage.getItem('id')) {
-                    id = parseInt(localStorage.getItem('id'));
+                    id = parseInt(localStorage.getItem('id'), 10);
                 }
                 newPost['id'] = id;
                 newPost['done'] = false;

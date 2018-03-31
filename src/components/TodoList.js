@@ -2,6 +2,7 @@ import React from 'react';
 import TodoListItem from './TodoListItem';
 import { ListGroup } from 'react-bootstrap';
 import FlipMove from 'react-flip-move';
+import _ from 'lodash';
 
 class TodoList extends React.Component {
 
@@ -25,15 +26,22 @@ class TodoList extends React.Component {
     }
 
     render() {
-        return (
-            <ListGroup>
-                <FlipMove duration={300}>
-                    {
-                        this.props.posts.map(this.renderListItem)
-                    }
-                </FlipMove>
-            </ListGroup>
-        )
+        if(!_.isEmpty(this.props.posts)) {
+            return (
+                <ListGroup>
+                    <FlipMove duration={300}>
+                        {
+                            this.props.posts.map(this.renderListItem)
+                        }
+                    </FlipMove>
+                </ListGroup>
+            )
+        }
+        else {
+            return (
+                <h4> Todo list empty </h4>
+            )
+        }
     }
 }
 
