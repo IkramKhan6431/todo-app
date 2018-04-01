@@ -37,8 +37,18 @@ Then in order to install the required node modules, run the following statement
 npm install
 ```
 
+### Starting
+
 You've got project all setup, now all you need to do is start the development server, that will run on port 3000 by default.
 
 ```
 npm start
+```
+
+### Building
+
+In order to build project for deployment, run following statement
+
+```
+npm run build
 ```
