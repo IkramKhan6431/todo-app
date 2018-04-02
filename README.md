@@ -10,6 +10,8 @@ A simple react todo app that performs the following tasks:
 * `Remove` item
 * `Mark` item as done/undone
 
+Note: Currently the items are being stored in the browser's local storage rather than on the server.
+
 ## Demo & Example
 
 You can find the live demo of the app [here](http://todolist-app-demo.herokuapp.com)
